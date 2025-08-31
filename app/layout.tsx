@@ -7,6 +7,10 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'itsnotfaanganymore',
   description: "It's not FAANG anymore, it's _______",
+  icons: {
+    icon: { url: '/favicon.svg', type: 'image/svg+xml' },
+    shortcut: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({

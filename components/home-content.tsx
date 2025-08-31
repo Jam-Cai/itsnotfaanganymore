@@ -123,7 +123,7 @@ export default function HomeContent() {
       </div>
 
       <header className="fixed top-0 left-0 right-0 z-20 w-full p-6 flex justify-between items-center backdrop-blur-sm bg-background/80 border-b border-border/20">
-        <div className="text-sm font-medium text-muted-foreground">itsnotfaanganymore.com</div>
+        <div className="text-sm font-medium text-muted-foreground">itsnotfaanganymore.lol</div>
         <div className="text-xs text-muted-foreground/60"></div>
       </header>
 
@@ -211,7 +211,7 @@ export default function HomeContent() {
       <footer className="fixed bottom-0 left-0 right-0 z-20 w-full p-6 border-t border-border/50 bg-background/90 backdrop-blur-md">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-6 text-xs text-muted-foreground">
-            <span>© 2025 itsnotfaanganymore.com</span>
+            <span>© 2025 itsnotfaanganymore.lol</span>
             <span className="hidden md:inline">•</span>
             <span>Inspired by the FAANG → MANGO meme</span>
           </div>
@@ -228,7 +228,6 @@ export default function HomeContent() {
             <a href="https://www.linkedin.com/in/jam-cai/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
               LinkedIn
             </a>
-            <span>•</span>
           </div>
         </div>
       </footer>

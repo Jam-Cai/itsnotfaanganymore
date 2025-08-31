@@ -1,0 +1,35 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main gradient background -->
+    <linearGradient id="mainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#d97706;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b45309;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Letter background -->
+    <linearGradient id="letterBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main rounded square background -->
+  <rect width="32" height="32" rx="7" fill="url(#mainGrad)" stroke="#92400e" stroke-width="0.5"/>
+  
+  <!-- Tech company logos represented as geometric shapes -->
+  <!-- Top row - 3 company logos -->
+  <rect x="4" y="4" width="6" height="6" rx="1" fill="#ffffff" opacity="0.85"/>
+  <circle cx="19" cy="7" r="3" fill="#ffffff" opacity="0.85"/>
+  <polygon points="25,4 28,4 28,10 25,10" fill="#ffffff" opacity="0.85"/>
+  
+  <!-- Bottom section - Letter for acronym -->
+  <rect x="6" y="16" width="20" height="12" rx="2" fill="url(#letterBg)" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Large "A" representing Acronym -->
+  <text x="16" y="26" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="10" font-weight="900" fill="#ffffff" opacity="0.95">A</text>
+  
+  <!-- Small decorative dots -->
+  <circle cx="8" cy="14" r="0.8" fill="#ffffff" opacity="0.4"/>
+  <circle cx="24" cy="14" r="0.8" fill="#ffffff" opacity="0.4"/>
+</svg>

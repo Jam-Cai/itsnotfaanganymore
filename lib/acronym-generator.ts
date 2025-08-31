@@ -57,16 +57,18 @@ export class AcronymGenerator {
     canRegenerate: boolean
   } {
     const upperWord = word.toUpperCase().trim()
+    // Remove spaces for processing, but keep track of original positions
+    const lettersOnly = upperWord.replace(/\s+/g, '')
+    
     this.reset()
     
-    // Initialize seed based on the word for deterministic results
-    this.seed = this.createSeed(upperWord)
+    // Note: We'll set seed per letter for consistent results across different words
 
-    // Count letter frequencies to prioritize rare letters
-    this.analyzeLetterFrequency(upperWord)
+    // Count letter frequencies to prioritize rare letters (spaces ignored)
+    this.analyzeLetterFrequency(lettersOnly)
 
     // Sort letters by rarity (letters that appear less frequently get priority)
-    const letterPriority = this.createLetterPriority(upperWord)
+    const letterPriority = this.createLetterPriority(lettersOnly)
 
     const acronym: AcronymResult[] = []
     const duplicateLetters: string[] = []
@@ -77,28 +79,39 @@ export class AcronymGenerator {
 
       if (availableCompanies.length >= indices.length) {
         // We have enough companies for all instances of this letter
-        const selectedCompanies = this.selectCompaniesForLetter(availableCompanies, indices.length)
-
+        // Generate companies for each instance of this letter
         indices.forEach((index, i) => {
-          acronym[index] = {
-            letter,
-            company: selectedCompanies[i],
-            isPlaceholder: false,
+          // Use letter + occurrence number for consistent but varied selection
+          const letterSeed = letter + i.toString()
+          this.seed = this.createSeed(letterSeed)
+          
+          const selectedCompanies = this.selectCompaniesForLetter(availableCompanies.filter(c => !this.usedCompanies.has(c.name)), 1, letterSeed)
+          
+          if (selectedCompanies.length > 0) {
+            acronym[index] = {
+              letter,
+              company: selectedCompanies[0],
+              isPlaceholder: false,
+            }
+            this.usedCompanies.add(selectedCompanies[0].name)
           }
-          this.usedCompanies.add(selectedCompanies[i].name)
         })
       } else {
         // Not enough unique companies, some will be placeholders
-        const selectedCompanies = this.selectCompaniesForLetter(availableCompanies, availableCompanies.length)
-
         indices.forEach((index, i) => {
-          if (i < selectedCompanies.length) {
+          const letterSeed = letter + i.toString()
+          this.seed = this.createSeed(letterSeed)
+          
+          const availableForThis = availableCompanies.filter(c => !this.usedCompanies.has(c.name))
+          
+          if (availableForThis.length > 0) {
+            const selectedCompanies = this.selectCompaniesForLetter(availableForThis, 1, letterSeed)
             acronym[index] = {
               letter,
-              company: selectedCompanies[i],
+              company: selectedCompanies[0],
               isPlaceholder: false,
             }
-            this.usedCompanies.add(selectedCompanies[i].name)
+            this.usedCompanies.add(selectedCompanies[0].name)
           } else {
             acronym[index] = {
               letter,
@@ -114,21 +127,25 @@ export class AcronymGenerator {
     }
 
     const stats: GenerationStats = {
-      totalLetters: upperWord.length,
+      totalLetters: lettersOnly.length,
       uniqueCompanies: this.usedCompanies.size,
       placeholders: acronym.filter((item) => item.isPlaceholder).length,
       duplicateLetters,
     }
 
-    const canRegenerate = this.canRegenerateWithDifferentResults(upperWord)
+    const canRegenerate = this.canRegenerateWithDifferentResults(lettersOnly)
 
     return { acronym, stats, canRegenerate }
   }
 
-  private selectCompaniesForLetter(companies: Company[], count: number): Company[] {
+  private selectCompaniesForLetter(companies: Company[], count: number, letter: string): Company[] {
     if (count >= companies.length) {
       return [...companies]
     }
+
+    // Set seed based on the letter for consistent selection across different words
+    // Add a small offset to ensure we get different companies for multiple instances
+    this.seed = this.createSeed(letter)
 
     // Weighted selection favoring well-known companies
     const weights = companies.map((company) => this.getCompanyWeight(company))
@@ -168,14 +185,15 @@ export class AcronymGenerator {
     ]
 
     if (popularCompanies.includes(company.name)) {
-      return 3
+      return 5
     }
 
     // Medium weight for other well-known companies
     const knownCompanies = ["Instagram", "WhatsApp", "YouTube", "TikTok", "Uber", "PayPal", "Reddit"]
 
     if (knownCompanies.includes(company.name)) {
-      return 2
+      return 3
+
     }
 
     return 1 // Default weight
@@ -272,6 +290,7 @@ export class AcronymGenerator {
 
   regenerateWithAlternatives(word: string, currentAcronym: AcronymResult[]): AcronymResult[] | null {
     const upperWord = word.toUpperCase().trim()
+    const lettersOnly = upperWord.replace(/\s+/g, '')
     this.reset()
 
     // Mark current companies as used to force different selection
@@ -285,7 +304,7 @@ export class AcronymGenerator {
 
     while (attempts < maxAttempts) {
       // Use a different seed for each attempt to get variation
-      this.seed = this.createSeed(upperWord + attempts.toString())
+      this.seed = this.createSeed(lettersOnly + attempts.toString())
       
       const result = this.generateAcronym(word)
       const newCompanies = new Set(
