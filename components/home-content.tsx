@@ -23,6 +23,8 @@ export default function HomeContent() {
   const [generatedAcronym, setGeneratedAcronym] = useState<AcronymResult[]>([])
   const [isSharing, setIsSharing] = useState(false)
   const [shareSuccess, setShareSuccess] = useState(false)
+  const [shouldFocus, setShouldFocus] = useState(false)
+  const inputRef = React.useRef<HTMLInputElement>(null)
 
   const generator = new AcronymGenerator()
 
@@ -32,6 +34,18 @@ export default function HomeContent() {
     if (wordParam) {
       const filteredValue = wordParam.replace(/[^a-zA-Z\s]/g, "").toUpperCase()
       setInputWord(filteredValue)
+      setShouldFocus(false)
+      
+      // Auto-select the text after a brief delay to ensure input is rendered
+      setTimeout(() => {
+        if (inputRef.current) {
+          inputRef.current.focus()
+          inputRef.current.select()
+        }
+      }, 100)
+    } else {
+      // No URL parameter, should focus the input
+      setShouldFocus(true)
     }
   }, [searchParams])
 
@@ -131,11 +145,15 @@ export default function HomeContent() {
                 <br />
                 it's{" "}
                 <Input
+                  ref={inputRef}
                   type="text"
                   placeholder=""
                   value={inputWord}
                   onChange={handleInputChange}
-                  className="inline-block w-auto min-w-[300px] text-4xl md:text-6xl font-black bg-transparent border-none p-2 h-auto text-primary focus:ring-0 focus:outline-none placeholder:text-primary/50 transition-all duration-200"
+                  autoFocus={shouldFocus}
+                  className={`inline-block w-auto min-w-[300px] text-4xl md:text-6xl font-black bg-transparent border-none p-2 h-auto text-primary focus:outline-none placeholder:text-primary/50 transition-all duration-200 ${
+                    shouldFocus && !inputWord ? 'ring-2 ring-primary/30 ring-offset-2 rounded-md' : 'focus:ring-0'
+                  }`}
                   style={{ width: `${Math.max(inputWord.length || 5, 8)}ch` }}
                 />
                 .
