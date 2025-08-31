@@ -132,7 +132,7 @@ export default function HomeContent() {
                 it's{" "}
                 <Input
                   type="text"
-                  placeholder="______"
+                  placeholder=""
                   value={inputWord}
                   onChange={handleInputChange}
                   className="inline-block w-auto min-w-[300px] text-4xl md:text-6xl font-black bg-transparent border-none p-2 h-auto text-primary focus:ring-0 focus:outline-none placeholder:text-primary/50 transition-all duration-200"
