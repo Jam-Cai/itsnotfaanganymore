@@ -93,7 +93,7 @@
   "J": [
     { "name": "JetBrains", "logo": "jetbrains.svg" },
     { "name": "Jira", "logo": "jira.svg" },
-    { "name": "JPMorgan", "logo": "jpmorgan.svg" },
+    { "name": "JPMorgan", "logo": "jpmorgan.svg" }
   ],
   "K": [
     { "name": "Kubernetes", "logo": "kubernetes.svg" },
