@@ -94,7 +94,6 @@
     { "name": "JetBrains", "logo": "jetbrains.svg" },
     { "name": "Jira", "logo": "jira.svg" },
     { "name": "JPMorgan", "logo": "jpmorgan.svg" },
-    { "name": "JD.com", "logo": "jd.svg" }
   ],
   "K": [
     { "name": "Kubernetes", "logo": "kubernetes.svg" },
