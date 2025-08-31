@@ -24,7 +24,6 @@ export default function HomeContent() {
   const [isSharing, setIsSharing] = useState(false)
   const [shareSuccess, setShareSuccess] = useState(false)
   const [shouldFocus, setShouldFocus] = useState(false)
-  const inputRef = React.useRef<HTMLInputElement>(null)
 
   const generator = new AcronymGenerator()
 
@@ -35,14 +34,6 @@ export default function HomeContent() {
       const filteredValue = wordParam.replace(/[^a-zA-Z\s]/g, "").toUpperCase()
       setInputWord(filteredValue)
       setShouldFocus(false)
-      
-      // Auto-select the text after a brief delay to ensure input is rendered
-      setTimeout(() => {
-        if (inputRef.current) {
-          inputRef.current.focus()
-          inputRef.current.select()
-        }
-      }, 100)
     } else {
       // No URL parameter, should focus the input
       setShouldFocus(true)
@@ -145,7 +136,6 @@ export default function HomeContent() {
                 <br />
                 it's{" "}
                 <Input
-                  ref={inputRef}
                   type="text"
                   placeholder=""
                   value={inputWord}
