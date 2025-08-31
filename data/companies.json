@@ -1,0 +1,230 @@
+{
+  "A": [
+    { "name": "Apple", "logo": "apple.svg" },
+    { "name": "Adobe", "logo": "adobe.svg" },
+    { "name": "Amazon", "logo": "amazon.svg" },
+    { "name": "Atlassian", "logo": "atlassian.svg" },
+    { "name": "Airbnb", "logo": "airbnb.svg" },
+    { "name": "AMD", "logo": "amd.svg" },
+    { "name": "Asana", "logo": "asana.svg" },
+    { "name": "Anthropic", "logo": "anthropic.svg" },
+    { "name": "Auth0", "logo": "auth0.svg" },
+    { "name": "Airtable", "logo": "airtable.svg" },
+    { "name": "Algolia", "logo": "algolia.svg" },
+    { "name": "Amplitude", "logo": "amplitude.svg" }
+  ],
+  "B": [
+    { "name": "ByteDance", "logo": "bytedance.svg" },
+    { "name": "Booking.com", "logo": "booking.svg" },
+    { "name": "Baidu", "logo": "baidu.svg" },
+    { "name": "Box", "logo": "box.svg" },
+    { "name": "BitBucket", "logo": "bitbucket.svg" },
+    { "name": "Blizzard", "logo": "blizzard.svg" },
+    { "name": "Brave", "logo": "brave.svg" },
+    { "name": "Broadcom", "logo": "broadcom.svg" },
+    { "name": "Buffer", "logo": "buffer.svg" }
+  ],
+  "C": [
+    { "name": "Coinbase", "logo": "coinbase.svg" },
+    { "name": "Cisco", "logo": "cisco.svg" },
+    { "name": "Canva", "logo": "canva.svg" },
+    { "name": "Cloudflare", "logo": "cloudflare.svg" },
+    { "name": "ChatGPT", "logo": "chatgpt.svg" },
+    { "name": "Confluent", "logo": "confluent.svg" },
+    { "name": "CrowdStrike", "logo": "crowdstrike.svg" },
+    { "name": "Coursera", "logo": "coursera.svg" },
+    { "name": "Crunchbase", "logo": "crunchbase.svg" },
+    { "name": "Clubhouse", "logo": "clubhouse.svg" },
+    { "name": "Circle", "logo": "circle.svg" },
+    { "name": "Calendly", "logo": "calendly.svg" }
+  ],
+  "D": [
+    { "name": "Discord", "logo": "discord.svg" },
+    { "name": "Dropbox", "logo": "dropbox.svg" },
+    { "name": "Docker", "logo": "docker.svg" },
+    { "name": "Databricks", "logo": "databricks.svg" },
+    { "name": "Dell", "logo": "dell.svg" },
+    { "name": "Duolingo", "logo": "duolingo.svg" },
+    { "name": "DoorDash", "logo": "doordash.svg" },
+    { "name": "DataDog", "logo": "datadog.svg" }
+  ],
+  "E": [
+    { "name": "Epic Games", "logo": "epic-games.svg" },
+    { "name": "Etsy", "logo": "etsy.svg" },
+    { "name": "eBay", "logo": "ebay.svg" },
+    { "name": "Elastic", "logo": "elastic.svg" },
+    { "name": "Expedia", "logo": "expedia.svg" },
+    { "name": "Electronic Arts", "logo": "ea.svg" }
+  ],
+  "F": [
+    { "name": "Facebook", "logo": "facebook.svg" },
+    { "name": "Figma", "logo": "figma.svg" },
+    { "name": "Flipkart", "logo": "flipkart.svg" },
+    { "name": "Fiverr", "logo": "fiverr.svg" },
+    { "name": "Firefox", "logo": "firefox.svg" },
+    { "name": "Framer", "logo": "framer.svg" },
+    { "name": "FedEx", "logo": "fedex.svg" },
+    { "name": "Fastly", "logo": "fastly.svg" }
+  ],
+  "G": [
+    { "name": "Google", "logo": "google.svg" },
+    { "name": "GitHub", "logo": "github.svg" },
+    { "name": "GitLab", "logo": "gitlab.svg" },
+    { "name": "Grab", "logo": "grab.svg" }
+  ],
+  "H": [
+    { "name": "HubSpot", "logo": "hubspot.svg" },
+    { "name": "HashiCorp", "logo": "hashicorp.svg" },
+    { "name": "Huawei", "logo": "huawei.svg" },
+    { "name": "Hulu", "logo": "hulu.svg" }
+  ],
+  "I": [
+    { "name": "Instagram", "logo": "instagram.svg" },
+    { "name": "Intel", "logo": "intel.svg" },
+    { "name": "IBM", "logo": "ibm.svg" },
+    { "name": "Indeed", "logo": "indeed.svg" },
+    { "name": "Instacart", "logo": "instacart.svg" },
+    { "name": "Intercom", "logo": "intercom.svg" },
+    { "name": "Invision", "logo": "invision.svg" },
+    { "name": "Intuit", "logo": "intuit.svg" },
+    { "name": "Imgur", "logo": "imgur.svg" },
+    { "name": "IEX", "logo": "iex.svg" }
+  ],
+  "J": [
+    { "name": "JetBrains", "logo": "jetbrains.svg" },
+    { "name": "Jira", "logo": "jira.svg" },
+    { "name": "JPMorgan", "logo": "jpmorgan.svg" },
+    { "name": "JD.com", "logo": "jd.svg" }
+  ],
+  "K": [
+    { "name": "Kubernetes", "logo": "kubernetes.svg" },
+    { "name": "Klarna", "logo": "klarna.svg" },
+    { "name": "Khan Academy", "logo": "khan-academy.svg" },
+    { "name": "Kakao", "logo": "kakao.svg" }
+  ],
+  "L": [
+    { "name": "LinkedIn", "logo": "linkedin.svg" },
+    { "name": "Lyft", "logo": "lyft.svg" },
+    { "name": "Line", "logo": "line.svg" },
+    { "name": "Lucid", "logo": "lucid.svg" },
+    { "name": "Linear", "logo": "linear.svg" },
+    { "name": "Loom", "logo": "loom.svg" },
+    { "name": "LogRocket", "logo": "logrocket.svg" }
+  ],
+  "M": [
+    { "name": "Meta", "logo": "meta.svg" },
+    { "name": "Microsoft", "logo": "microsoft.svg" },
+    { "name": "MongoDB", "logo": "mongodb.svg" },
+    { "name": "Miro", "logo": "miro.svg" },
+    { "name": "Mozilla", "logo": "mozilla.svg" },
+    { "name": "Mailchimp", "logo": "mailchimp.svg" },
+    { "name": "Mastercard", "logo": "mastercard.svg" },
+    { "name": "Midjourney", "logo": "midjourney.svg" },
+    { "name": "Mistral", "logo": "mistral.svg" }
+  ],
+  "N": [
+    { "name": "Netflix", "logo": "netflix.svg" },
+    { "name": "Nvidia", "logo": "nvidia.svg" },
+    { "name": "Notion", "logo": "notion.svg" },
+    { "name": "Nintendo", "logo": "nintendo.svg" },
+    { "name": "Netlify", "logo": "netlify.svg" },
+    { "name": "Nubank", "logo": "nubank.svg" },
+    { "name": "NordVPN", "logo": "nordvpn.svg" },
+    { "name": "Nokia", "logo": "nokia.svg" }
+  ],
+  "O": [
+    { "name": "OpenAI", "logo": "openai.svg" },
+    { "name": "Oracle", "logo": "oracle.svg" },
+    { "name": "Okta", "logo": "okta.svg" },
+    { "name": "Opera", "logo": "opera.svg" },
+    { "name": "Oura", "logo": "oura.svg" },
+    { "name": "OnePlus", "logo": "oneplus.svg" },
+    { "name": "Oculus", "logo": "oculus.svg" },
+    { "name": "OpenTable", "logo": "opentable.svg" },
+    { "name": "Optimizely", "logo": "optimizely.svg" },
+    { "name": "Otter.ai", "logo": "otter.svg" },
+    { "name": "Outreach", "logo": "outreach.svg" },
+    { "name": "Origin", "logo": "origin.svg" }
+  ],
+  "P": [
+    { "name": "PayPal", "logo": "paypal.svg" },
+    { "name": "Pinterest", "logo": "pinterest.svg" },
+    { "name": "Palantir", "logo": "palantir.svg" },
+    { "name": "Postman", "logo": "postman.svg" },
+    { "name": "Pagerduty", "logo": "pagerduty.svg" },
+    { "name": "Peloton", "logo": "peloton.svg" }
+  ],
+  "Q": [
+    { "name": "Qualcomm", "logo": "qualcomm.svg" },
+    { "name": "Quora", "logo": "quora.svg" },
+    { "name": "Qlik", "logo": "qlik.svg" },
+    { "name": "Quantum", "logo": "quantum.svg" }
+  ],
+  "R": [
+    { "name": "Reddit", "logo": "reddit.svg" },
+    { "name": "Roblox", "logo": "roblox.svg" },
+    { "name": "Roku", "logo": "roku.svg" },
+    { "name": "Robinhood", "logo": "robinhood.svg" },
+    { "name": "Revolut", "logo": "revolut.svg" },
+    { "name": "Replit", "logo": "replit.svg" }
+  ],
+  "S": [
+    { "name": "Spotify", "logo": "spotify.svg" },
+    { "name": "Slack", "logo": "slack.svg" },
+    { "name": "Stripe", "logo": "stripe.svg" },
+    { "name": "Snapchat", "logo": "snapchat.svg" },
+    { "name": "Salesforce", "logo": "salesforce.svg" },
+    { "name": "ServiceNow", "logo": "servicenow.svg" },
+    { "name": "Shopify", "logo": "shopify.svg" },
+    { "name": "Square", "logo": "square.svg" },
+    { "name": "Splunk", "logo": "splunk.svg" },
+    { "name": "Samsung", "logo": "samsung.svg" }
+  ],
+  "T": [
+    { "name": "TikTok", "logo": "tiktok.svg" },
+    { "name": "Twitter", "logo": "twitter.svg" },
+    { "name": "Tesla", "logo": "tesla.svg" },
+    { "name": "Twitch", "logo": "twitch.svg" },
+    { "name": "Tableau", "logo": "tableau.svg" },
+    { "name": "Trello", "logo": "trello.svg" }
+  ],
+  "U": [
+    { "name": "Uber", "logo": "uber.svg" },
+    { "name": "Unity", "logo": "unity.svg" },
+    { "name": "Upwork", "logo": "upwork.svg" },
+    { "name": "Ubisoft", "logo": "ubisoft.svg" },
+    { "name": "UiPath", "logo": "uipath.svg" },
+    { "name": "Udemy", "logo": "udemy.svg" }
+  ],
+  "V": [
+    { "name": "Vercel", "logo": "vercel.svg" },
+    { "name": "Visa", "logo": "visa.svg" },
+    { "name": "VMware", "logo": "vmware.svg" },
+    { "name": "Vimeo", "logo": "vimeo.svg" },
+    { "name": "Venmo", "logo": "venmo.svg" }
+  ],
+  "W": [
+    { "name": "WhatsApp", "logo": "whatsapp.svg" },
+    { "name": "Wix", "logo": "wix.svg" },
+    { "name": "Webflow", "logo": "webflow.svg" },
+    { "name": "WeChat", "logo": "wechat.svg" }
+  ],
+  "X": [
+    { "name": "X (Twitter)", "logo": "x.svg" },
+    { "name": "Xiaomi", "logo": "xiaomi.svg" },
+    { "name": "Xerox", "logo": "xerox.svg" },
+    { "name": "Xbox", "logo": "xbox.svg" }
+  ],
+  "Y": [
+    { "name": "YouTube", "logo": "youtube.svg" },
+    { "name": "Yahoo", "logo": "yahoo.svg" },
+    { "name": "Yelp", "logo": "yelp.svg" },
+    { "name": "Yandex", "logo": "yandex.svg" }
+  ],
+  "Z": [
+    { "name": "Zoom", "logo": "zoom.svg" },
+    { "name": "Zendesk", "logo": "zendesk.svg" },
+    { "name": "Zapier", "logo": "zapier.svg" },
+    { "name": "Zara", "logo": "zara.svg" }
+  ]
+}
