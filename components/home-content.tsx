@@ -104,7 +104,7 @@ export default function HomeContent() {
   }, [inputWord])
 
   return (
-    <div className="h-screen min-w-full relative overflow-x-auto overflow-y-hidden">
+    <div className="h-screen w-full relative overflow-x-auto overflow-y-hidden">
       <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-background via-muted/10 to-primary/5">
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-20 left-20 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
@@ -127,8 +127,8 @@ export default function HomeContent() {
         <div className="text-xs text-muted-foreground/60"></div>
       </header>
 
-      <main className="relative z-10 h-full flex flex-col items-center justify-center pl-16 pr-4 pt-32 pb-32">
-        <div className="text-left max-w-4xl mx-auto min-w-max flex flex-col justify-center">
+      <main className="relative z-10 h-full flex flex-col items-center justify-center pl-16 pr-4 pt-32 pb-32 overflow-x-auto">
+        <div className="text-left w-full max-w-none flex flex-col justify-center">
           <div className="mb-8">
             <div className="relative">
               <h1 className="text-4xl md:text-6xl font-black text-foreground mb-12 text-balance leading-tight animate-in fade-in duration-1000">

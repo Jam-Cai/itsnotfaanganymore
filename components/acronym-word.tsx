@@ -16,7 +16,11 @@ interface AcronymWordProps {
 export function AcronymWord({ acronym, word, className }: AcronymWordProps) {
   return (
     <div className={className}>
-      <div className="flex justify-start gap-6 min-w-max">
+      <div className="text-left mb-8">
+        <span className="text-lg font-bold text-foreground">{word.toUpperCase()}</span> - Built with {acronym.length}{" "}
+        unique companies
+      </div>
+      <div className="flex justify-start gap-6 pb-16" style={{ minWidth: 'max-content' }}>
         {acronym.map((item, index) => (
           <LogoDisplay
             key={`${item.letter}-${index}`}

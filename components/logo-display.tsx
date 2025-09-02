@@ -32,6 +32,7 @@ const containerSizeClasses = {
 export function LogoDisplay({ company, letter, size = "lg", showHover = true, className, onClick }: LogoDisplayProps) {
   const [imageError, setImageError] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
+  const [isHovered, setIsHovered] = useState(false)
 
   const handleImageError = () => {
     console.log(`🚫 Logo not found for ${company.name} (${company.logo}) - using placeholder`)
@@ -54,15 +55,40 @@ export function LogoDisplay({ company, letter, size = "lg", showHover = true, cl
   }
 
   return (
-    <div className={cn("flex items-center justify-center", className)}>
+    <div 
+      className={cn("relative flex items-center justify-center group cursor-pointer", className)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
+    >
       <img
         src={getLogoSrc() || "/placeholder.svg"}
         alt={`${company.name} logo`}
-        className={cn("object-contain", sizeClasses[size])}
+        className={cn(
+          "object-contain transition-all duration-300", 
+          sizeClasses[size],
+          showHover && "group-hover:scale-110 group-hover:brightness-110"
+        )}
         onError={handleImageError}
         onLoad={handleImageLoad}
         loading="lazy"
       />
+      
+      {/* Company name tooltip */}
+      {showHover && (
+        <div 
+          className={cn(
+            "absolute -bottom-12 left-1/2 transform -translate-x-1/2 z-10",
+            "px-3 py-1.5 bg-gray-900 text-white text-sm font-medium rounded-lg shadow-lg",
+            "transition-all duration-300 whitespace-nowrap",
+            "before:content-[''] before:absolute before:-top-1 before:left-1/2 before:transform before:-translate-x-1/2",
+            "before:border-l-4 before:border-r-4 before:border-b-4 before:border-transparent before:border-b-gray-900",
+            isHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none"
+          )}
+        >
+          {company.name}
+        </div>
+      )}
     </div>
   )
 }
