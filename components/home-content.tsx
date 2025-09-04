@@ -129,17 +129,20 @@ export default function HomeContent() {
                 It's not <span className="line-through text-muted-foreground opacity-60">FAANG</span> anymore,
                 <br />
                 it's{" "}
-                <Input
-                  type="text"
-                  placeholder=""
-                  value={inputWord}
-                  onChange={handleInputChange}
-                  autoFocus={shouldFocus}
-                  className={`inline-block w-auto min-w-[300px] text-4xl md:text-6xl font-black bg-transparent border-none p-2 h-auto text-primary focus:outline-none placeholder:text-primary/50 transition-all duration-200 ${
-                    shouldFocus && !inputWord ? 'ring-2 ring-primary/30 ring-offset-2 rounded-md' : 'focus:ring-0'
-                  }`}
-                  style={{ width: `${Math.max(inputWord.length || 5, 8)}ch` }}
-                />.{" "}
+<span className="inline-flex items-baseline whitespace-nowrap">
+                  <Input
+                    type="text"
+                    placeholder=""
+                    value={inputWord}
+                    onChange={handleInputChange}
+                    autoFocus={shouldFocus}
+                    className={`inline-block w-auto min-w-[300px] text-4xl md:text-6xl font-black bg-transparent border-none p-2 h-auto text-primary focus:outline-none placeholder:text-primary/50 transition-all duration-200 ${
+                      shouldFocus && !inputWord ? 'ring-2 ring-primary/30 ring-offset-2 rounded-md' : 'focus:ring-0'
+                    }`}
+                    style={{ width: `${Math.max(inputWord.length || 5, 8)}ch` }}
+                  />
+                  <span className="text-4xl md:text-6xl font-black text-foreground">.</span>
+                </span>{" "}
               </h1>
               
               {generatedAcronym.length > 0 && (
