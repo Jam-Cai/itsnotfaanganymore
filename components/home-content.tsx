@@ -27,7 +27,6 @@ export default function HomeContent() {
 
   const generator = new AcronymGenerator()
 
-  // Initialize word from URL parameter
   useEffect(() => {
     const wordParam = searchParams.get('word')
     if (wordParam) {
@@ -35,14 +34,12 @@ export default function HomeContent() {
       setInputWord(filteredValue)
       setShouldFocus(false)
     } else {
-      // No URL parameter, should focus the input
       setShouldFocus(true)
     }
   }, [searchParams])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
-    // Only allow letters and spaces, remove any other characters
     const filteredValue = value.replace(/[^a-zA-Z\s]/g, "").toUpperCase()
     setInputWord(filteredValue)
   }
@@ -56,7 +53,6 @@ export default function HomeContent() {
     try {
       const shareUrl = `${window.location.origin}${window.location.pathname}?word=${encodeURIComponent(inputWord.toLowerCase())}`
       
-      // Try Web Share API first (mobile)
       if (navigator.share && /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
         await navigator.share({
           title: `${inputWord.toUpperCase()} - It's not FAANG anymore`,
@@ -65,11 +61,9 @@ export default function HomeContent() {
         })
         setShareSuccess(true)
       } else {
-        // Fallback to clipboard
         if (navigator.clipboard && window.isSecureContext) {
           await navigator.clipboard.writeText(shareUrl)
         } else {
-          // Fallback for older browsers
           const textArea = document.createElement('textarea')
           textArea.value = shareUrl
           textArea.style.position = 'fixed'
@@ -145,8 +139,7 @@ export default function HomeContent() {
                     shouldFocus && !inputWord ? 'ring-2 ring-primary/30 ring-offset-2 rounded-md' : 'focus:ring-0'
                   }`}
                   style={{ width: `${Math.max(inputWord.length || 5, 8)}ch` }}
-                />
-                .
+                />.{" "}
               </h1>
               
               {generatedAcronym.length > 0 && (
