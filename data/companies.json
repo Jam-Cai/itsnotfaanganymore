@@ -177,7 +177,8 @@
     { "name": "Shopify", "logo": "shopify.svg" },
     { "name": "Square", "logo": "square.svg" },
     { "name": "Splunk", "logo": "splunk.svg" },
-    { "name": "Samsung", "logo": "samsung.svg" }
+    { "name": "Samsung", "logo": "samsung.svg" },
+    { "name": "Sentry", "logo": "sentry.svg" }
   ],
   "T": [
     { "name": "TikTok", "logo": "tiktok.svg" },
